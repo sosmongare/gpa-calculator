@@ -33,9 +33,6 @@ class GPAController extends Controller
             // Get user agent information
             $userAgent = $request->header('User-Agent');
     
-            // Determine if the user is on a mobile device
-
-    
             // Store data in the GPAData table
             $cummulative=GPAData::create([
                 'gradeA' => $gradeA,
