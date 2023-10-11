@@ -10,17 +10,22 @@ jobs:
     steps:
       - name: Get the latest code
         uses: actions/checkout@v2.3.2
-      - uses: actions/setup-node@master
+      - uses: actions/setup-node@v2  # Use the latest version of setup-node action
       - name: Install Dependencies
         run: composer update -n --prefer-dist
+        working-directory: gpacalculator  # Set the working directory
       - name: Setup Project
         run: php artisan optimize:clear
+        working-directory: gpacalculator  # Set the working directory
       - name: Generate key
         run: php artisan key:generate
+        working-directory: gpacalculator  # Set the working directory
       - name: Generate storage link
         run: php artisan storage:link
+        working-directory: gpacalculator  # Set the working directory
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
+        working-directory: gpacalculator  # Set the working directory
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
