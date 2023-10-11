@@ -71,3 +71,4 @@ This GPA Calculator is built using Laravel and Bootstrap. To use it, follow thes
 ## License
 
 This GPA Calculator is open-source and released under the [MIT License]. Feel free to use, modify, and distribute it as needed.
+
