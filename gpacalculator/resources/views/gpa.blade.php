@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2 class="text-center">GPA Calculator</h2>
+    <h2 class="text-center">GPA Calculator app</h2>
     <div class="row">
         <div class="col-md-6">
             <form action="{{ route('calculate') }}" method="POST">
